@@ -17,7 +17,6 @@ input[type="text"]{
     padding: 5px;
 }
 div.words-to-type{
-
     line-height: 3;
     margin: 3vh auto;
     border: 3px solid lightblue;
@@ -34,7 +33,6 @@ div.words-to-type{
 .btn-start-game{
     margin-top: 2vh;
     display: none;
-    
 }
 .active{
     display:block;
@@ -45,4 +43,8 @@ div.words-to-type{
 }
 .red{
     color: red;
+}
+
+.random-word{
+    user-select: none;
 }

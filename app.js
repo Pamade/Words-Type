@@ -57,10 +57,8 @@ const typeWord = () => {
                 clearInterval(startTimer)
                 document.querySelector('.match-result').classList.add('active')
                 startNextGameButton.classList.add('active')
-                
                 clearInterval(startTimer)
                 clearInterval(startCounting)
-                
             }
 
         }, 1000)
@@ -72,8 +70,8 @@ const typeWord = () => {
         if (timer === 0) {
             return
         } 
-        writtenWord = '' 
 
+        writtenWord = '' 
         writtenWord = e.target.value
         
         if (writtenWord === arrayWords[0]){
@@ -86,10 +84,8 @@ const typeWord = () => {
             .then(response => response.json())
             .then(data =>{
                 arrayWords.shift(data)
-                const span = document.createElement('span')
-            
+                const span = document.createElement('span')    
                 span.className = 'random-word'
-
                 arrayWords.push(data[0])
                 boxWithWords.firstElementChild.remove()
 
@@ -107,7 +103,6 @@ const typeWord = () => {
         let single_letter = document.querySelector(`.single-letter:nth-of-type(${whichLetter})`)
 
         if(single_letter.textContent === writtenWord.charAt(whichLetter - 1) ){
-            
             if (goodWord){
                 whichLetter = 0
                 goodWord = false;
@@ -117,7 +112,6 @@ const typeWord = () => {
             single_letter.classList.add('green')   
         }
         else  {
-            
             single_letter.classList.add('red')
             
         }
@@ -129,7 +123,6 @@ startNextGameButton.addEventListener('click', ()=> {
     window.location.reload(false);
 
     const allWordsInGame = document.querySelectorAll('.random-word')
-
     document.querySelector('.your-words').textContent = words
     document.querySelector('.your-time').textContent = timer
     for (let i=0; allWordsInGame.length > i; i++){
