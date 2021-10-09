@@ -1,4 +1,4 @@
-# Fast Words Typing</br>
+# Words-Type </br>
 
 
 ![fast words typing](https://user-images.githubusercontent.com/51877514/130502879-5af94029-1b47-4a61-b56e-652eb3cc7171.JPG)
